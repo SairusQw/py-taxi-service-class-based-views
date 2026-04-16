@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Car List</h1>
+  {% for car in car_list %}
+    <ul>
+      <li><a href={{ car.absolute_url }}>{{ car.model }}</a></li>
+    </ul>
+  {% empty %}
+    <p>Cars are not exist!</p>
+  {% endfor %}
+{% endblock %}

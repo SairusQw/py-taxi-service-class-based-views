@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Manufacturer List</h1>
+  {% for manufacturer in manufacturer_list %}
+    <ul>
+      <li>Manufacturer: {{ manufacturer.name }}</li>
+    </ul>
+  {% empty %}
+    <p>Manufacturer is not exist!</p>
+  {% endfor %}
+{% endblock %}
